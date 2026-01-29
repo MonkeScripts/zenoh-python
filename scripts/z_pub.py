@@ -47,7 +47,7 @@ def main(
         print("Press CTRL-C to quit...")
         for idx in itertools.count() if iter is None else range(iter):
             time.sleep(interval)
-            buf = f"[{idx:4d}] {payload}"
+            buf = f"[{idx:4d}] {payload}{idx:4d}"
             print(f"Putting Data ('{key}': '{buf}')...")
             pub.put(buf)
 
